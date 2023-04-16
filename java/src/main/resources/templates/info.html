@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="../Images/img-DS.png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Info</title>
+  <link rel="stylesheet" href="../css/info.css" />
+  <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/preloader.css" />
+  <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+          crossorigin="anonymous"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="../js/preloader.js"></script>
+  <link rel="stylesheet" href="../css/navbar.css" />
+
+
+<body>
+<div class="se-pre-con"></div>
+<header>
+  <nav>
+    <ul>
+      <li class="primary-nav">
+        <img src="/img/img-DS.png" alt="logo" />
+        <a href="/">DuyShose</a>
+      </li>
+      <li class="secondary-nav">
+        <a href="/history">
+          <i class="fas fa-history"></i> History
+        </a>
+      </li>
+      <li class="secondary-nav">
+        <a href="/checkout">
+          <i class="fas fa-shopping-cart"></i> Cart
+        </a>
+      </li>
+
+
+      <li class="secondary-nav"><a href="/">Shop</a></li>
+      <li class="secondary-nav">
+        <a href="">About Us</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<section>
+  <div class="row">
+    <div class="col1">
+      <img th:src="${shoes.getImage()}" alt="" srcset="" />
+    </div>
+    <div class="col2">
+      <h1 th:text="${shoes.getName()}"> </h1>
+      <p th:text="${shoes.getDescription()}">
+      </p>
+      <h2 th:text="${shoes.getPrice()}">$</h2>
+      <h2 th:text="${shoes.getColor()}"></h2>
+      <h2 th:text="${shoes.getType()}"></h2>
+
+
+      <span >
+            <h3>Size</h3>
+            <select name="" id="select-css">
+              <option value="" selected disabled
+              >Please select an option</option
+              >
+              <option value="">6.5</option>
+              <option value="">7</option>
+              <option value="">7.5</option>
+              <option value="">8</option>
+              <option value="">8.5</option>
+              <option value="">9</option>
+            </select>
+          </span>
+      <br />
+      <br />
+      <a class="button-cart"  th:data-id="${shoes.getId()}" >Add to cart</a> &nbsp;
+
+      <a class="wishlist" href="">Add to wishlist</a>
+    </div>
+  </div>
+</section>
+<section class="video">
+  <h1 style="text-align: center">Video</h1>
+  <video
+          src="../Images/videoplayback.mp4"
+          type="video/mp4"
+          controls
+          controlsList="nodownload"
+          poster="../Images/nike-zoom.gif"
+          style="display:block; margin:30px auto; width: 70%"
+  ></video>
+</section>
+</body>
+<script src="../js/main.js"></script>
+</html>
